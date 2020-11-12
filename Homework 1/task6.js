@@ -1,0 +1,18 @@
+let name;
+let sername;
+let group;
+let yearOfBearth;
+name = "Vadym";
+sername = "Drenkaliuk";
+group = "JS QC";
+yearOfBearth = 1991;
+let isMarried = false;
+typeof(name);
+typeof(sername);
+typeof(group);
+typeof(yearOfBearth);
+typeof(isMarried);
+console.log(yearOfBearth, isMarried, name, sername, group);
+const typeIsNull = null;
+let typeIsUndefined;
+console.log(typeof(typeIsNull), typeof(typeIsUndefined));
