@@ -1,7 +1,7 @@
 let name;
 let lastname;
 let group;
-let yearOfBearth;
+let yearOfBirth;
 name = "Vadym";
 lastname = "Drenkaliuk";
 group = "JS QC";
