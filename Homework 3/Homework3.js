@@ -73,6 +73,8 @@ function lastElementInArray(arr, number) {
     if (number < arr.length) {
         let newArr = arr.slice(num);
         return newArr;
+    } else if (typeof (number) === 'undefined') {
+        return arr.pop();
     } else {
         return arr;
     }
