@@ -33,7 +33,7 @@ for (i = 0; i < 15; i++) {
 let arr = [];
 function randArray(k) {
     for (i = 0; i < k; i++) {
-        arr.push(Math.floor(Math.random() * 501));
+        arr.push(Math.floor(Math.random() * 500) + 1);
     }
 }
 randArray(15);
@@ -66,15 +66,26 @@ function findUnique(arr){
     return true;
 }
 
+//task 6 Alternative solution
+function findUnique(arr) {
+    arr.sort();
+    for (let i = 0; i < arr.length - 1; i++) {
+        if (arr[i] == arr[i + 1]) {
+            return false;
+        }
+    }
+    return true;
+}
+
 
 //task 7
 function lastElementInArray(arr, number) {
-    let num = arr.length - number;
-    if (number < arr.length) {
+    if (typeof (number) === 'undefined') {
+        return arr.pop();
+    } else if (number < arr.length) {
+        let num = arr.length - number;
         let newArr = arr.slice(num);
         return newArr;
-    } else if (typeof (number) === 'undefined') {
-        return arr.pop();
     } else {
         return arr;
     }
