@@ -89,7 +89,7 @@ function showMonthName(month) {
 }
 
 try {
-    let number = prompt("Enter a number of month", "Number");
+    let number = parseInt(prompt("Enter a number of month", "Number"));
     showMonthName(number);
 } catch (e) {
     if (e.name == "MonthException") {
