@@ -118,7 +118,7 @@ worker4.setExp = 1.3;
 
 let workers = [worker1, worker2, worker3, worker4];
 
-worker1.salaryForWorkers(workers);
+worker1.sortWorkersSalary(workers);
 
 
 //task5***************************************************************************
