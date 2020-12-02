@@ -1,0 +1,206 @@
+<!-- ****************************task1******************************************** -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Homework6</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <div id="test">First</div>
+    <script>
+        document.getElementById("test").innerHTML = "Last"; //first option
+        // document.body.firstElementChild.innerHTML = "Last"; // second option
+    </script>
+</body>
+</html>>
+
+<!-- *****************************task2******************************************** -->
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Homework6</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <img class="image" src="dog.jfif">
+    <script>
+        let myImage = document.images[0];
+        myImage.src = "cat.jfif";
+        alert(myImage.outerHTML);
+    </script>
+</body>
+</html>> -->
+
+<!-- *****************************task3********************************************** -->
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Homework6</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+	<h2>Article header</h2>      
+      <div id="text">
+        <p>First paragraph</p>
+        <p>Second paragraph</p>
+        <p>Third paragraph</p>
+      </div>
+    <p>Another text</p>
+    <script>
+        let allPInDiv = document.body.children[1].querySelectorAll("p");
+        for (i = 0; i < allPInDiv.length; i++){
+            alert(`Selector text ${[i]} : ${allPInDiv[i].innerHTML}`)
+        }
+    </script>
+</body>
+</html>> -->
+
+<!-- *****************************task4********************************************** -->
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Homework6</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+	<ul id = "list">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>>
+    <script>
+        let ulArray = document.body.querySelectorAll("li");
+        alert (ulArray[0].innerHTML);
+        alert (ulArray[4].innerHTML);
+        alert (ulArray[1].innerHTML);
+        alert (ulArray[3].innerHTML);
+        alert (ulArray[2].innerHTML);
+    </script>
+
+    option2**************
+    <script>
+        alert (document.body.querySelector("ul").children[0].innerHTML);
+        alert (document.body.querySelector("ul").children[4].innerHTML);
+        alert (document.body.querySelector("ul").children[1].innerHTML);
+        alert (document.body.querySelector("ul").children[3].innerHTML);
+        alert (document.body.querySelector("ul").children[2].innerHTML);
+    </script>
+</body>
+</html> -->
+
+<!-- *****************************task5********************************************** -->
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Homework6</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <h1>I'am a big header!!!</h1>
+    <div id="myDiv">
+        <p>First paragraph</p>
+        <p>Second paragraph</p>
+        <p>Third paragraph</p>
+        <p>Fourth paragraph</p>
+    </div>
+    <ul id="myList">
+        <li>Make</li>
+        <li>me</li>
+        <li>horizontal!</li>
+    </ul>
+    <span>Make me invisible, please!</span>
+    <script>
+        let getH1 = document.body.children[0];
+        let pArray = document.body.querySelectorAll("p");
+        let ulArray = document.body.querySelectorAll("li");
+
+        getH1.style.backgroundColor = "lightgreen";
+
+        pArray[0].style.fontWeight = "bold";
+        pArray[1].style.color = "brown";
+        pArray[2].style.textDecoration = "underline";
+        pArray[3].style.fontStyle = "italic";
+
+        document.body.children[2].innerHTML = `${ulArray[0].innerHTML + ulArray[1].innerHTML + ulArray[2].innerHTML}`;
+
+        document.getElementsByTagName("span")[0].style.visibility = "hidden";
+    </script>
+</body>
+</html> -->
+
+<!-- *****************************task6********************************************** -->
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Homework6</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+	<input type="text" id="input1" value="Text1">
+    <input type="text" id="input2" value="Text2">
+    <script>
+        let firstMessage = prompt("Type yor first message", "First message");
+        let secondMessage = prompt("Type yor second message", "Second message");
+
+        document.getElementById("input1").setAttribute("value", firstMessage);
+        document.getElementById("input2").setAttribute("value", secondMessage);
+
+        document.getElementById("input1").setAttribute("value", secondMessage);
+        document.getElementById("input2").setAttribute("value", firstMessage);        
+    </script>
+</body>
+</html> -->
+
+<!-- *****************************task7********************************************** -->
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Homework6</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <script>
+        document.body.append(document.createElement("main"));
+        let main = document.getElementsByTagName("main")[0];
+        main.setAttribute("class", "mainClasss check item");
+        main.appendChild(document.createElement("div"));
+        document.getElementsByTagName("div")[0].setAttribute("id", "myDiv");
+        document.getElementById("myDiv").append(document.createElement("p"));
+        document.getElementById("myDiv").children[0].innerHTML = "First paragraph";  
+    </script>
+</body>
+</html> -->
+
+
