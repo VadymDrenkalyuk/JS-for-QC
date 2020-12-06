@@ -1,0 +1,175 @@
+    <!-- ******************************************<Task 1>******************************************************** -->
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Homework7</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <script>
+        let newWindow = window.open("", "", "width = 300, height =300");
+        setTimeout(function() {
+            newWindow.resizeTo("500", "500");
+        }, 2000);
+        setTimeout(function() {
+            newWindow.moveTo("200", "200");
+        }, 4000);
+        setTimeout(function() {
+            newWindow.close();
+        }, 6000);
+    </script>
+</body>
+</html>> -->
+
+    <!-- ******************************************<Task 2>******************************************************** -->
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Homework7</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <p id ="text">I learning JavaScript events!</p> 
+    <div>
+        <button onclick="changeCSS()">Change style!</button>
+    </div>
+    <script>
+        function changeCSS() {
+            document.getElementById("text").style.color = "orange";
+            document.getElementById("text").style.fontSize = "20px";
+            document.getElementById("text").style.fontFamily = "Comic Sans MS";
+        }
+    </script>
+    </body>
+</html> -->
+
+    <!-- ******************************************<Task 3>******************************************************** -->
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Homework7</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <div>
+        <button onclick="changeBackgroundColor('blue')">Click to make the page blue.</button>
+        <button ondblclick="changeBackgroundColor('pink')">Double-click to make the page pink.</button>
+        <button onmousedown="changeBackgroundColor('brown')" onmouseup="changeBackgroundColor('white')">Click and hold to make the page brown.</button>
+        <a href="" onmouseover="changeBackgroundColor('yellow')" onmouseleave="changeBackgroundColor('white')">Hover over to make the page yellow</a>
+    </div>
+    <script>
+        function changeBackgroundColor(color) {
+            document.body.style.backgroundColor = color;
+        }
+    </script>
+</body>
+</html> -->
+
+    <!-- ******************************************<Task 4>******************************************************** -->
+    <!-- <!DOCTYPE html>
+    <html>
+    
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <title>Homework7</title>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+        <script src='main.js'></script>
+    </head>
+    
+    <body>
+        <div>
+            <select id="select">
+                <option>Peter</option>
+                <option>John</option>
+                <option>Alise</option>
+                <option>Alex</option>
+                <option>Iren</option>
+            </select>
+            <button onclick="deleteEl()">Choose and Delete</button>
+        </div>
+        <script>
+            let element = document.getElementById("select");
+            function deleteEl() {
+                element.options[element.selectedIndex].remove();
+            }            
+        </script>
+    </body>
+    
+    </html> -->
+
+    <!-- ******************************************<Task 5>******************************************************** -->
+        <!-- <!DOCTYPE html>
+        <html>
+        
+        <head>
+            <meta charset='utf-8'>
+            <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+            <title>Homework7</title>
+            <meta name='viewport' content='width=device-width, initial-scale=1'>
+            <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+            <script src='main.js'></script>
+        </head>
+        
+        <body>
+            <div>
+                <button onclick="showText('I was pressed!')" onmouseover="showText('Mouse is on me!')"
+                    onmouseout="showText('Mouse is not on me!')">Live button!</button>
+                <div id="myDiv">
+                </div>
+            </div>
+            <script>
+                function showText(message) {
+                    document.getElementById("myDiv").innerHTML += `<p>${message}</p>`;
+                }
+            </script>
+        </body>
+        
+        </html> -->
+
+    <!-- ******************************************<Task 6>******************************************************** -->
+        <!-- <!DOCTYPE html>
+        <html>
+        
+        <head>
+            <meta charset='utf-8'>
+            <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+            <title>Homework7</title>
+            <meta name='viewport' content='width=device-width, initial-scale=1'>
+            <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+            <script src='main.js'></script>
+        </head>
+        
+        <body>
+            <div id="myDiv">
+                <p>Width: </p>
+                <p id="myWidth"></p>
+                <p>Height:</p>
+                <p id="myHeight"></p>
+            </div>
+            <script>
+                window.addEventListener('resize', windowResize);
+
+                function windowResize() {
+                    document.getElementById('myWidth').innerText = window.outerWidth;
+                    document.getElementById('myHeight').innerText = window.outerHeight;
+                }
+            </script>
+        </body>
+        
+        </html> -->
