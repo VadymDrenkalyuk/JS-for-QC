@@ -1,5 +1,5 @@
     <!-- ******************************************<Task 1>******************************************************** -->
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
 <head>
     <meta charset='utf-8'>
@@ -23,7 +23,7 @@
         }, 6000);
     </script>
 </body>
-</html>>
+</html>> -->
 
     <!-- ******************************************<Task 2>******************************************************** -->
 
@@ -174,4 +174,72 @@
         
         </html> -->
 
+    <!-- ******************************************<Task 7>******************************************************** --> 
+        <!DOCTYPE html>
+        <html>
+        
+        <head>
+            <meta charset='utf-8'>
+            <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+            <title>Homework7</title>
+            <meta name='viewport' content='width=device-width, initial-scale=1'>
+            <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+            <script src='main.js'></script>
+        </head>
+        
+        <body>
+            <div>
+                <select name="country" id="country" onchange="whichCountry()">
+                    <option value="ger">Germany</option>
+                    <option value="usa">USA</option>
+                    <option value="ukr">Ukraine</option>
+                </select>
+        
+                <select name="cities" id="cities" onchange="showCurrentSelection()"></select>
+                <p id="currentSelection"></p>
+        
+            </div>
+        
+            <script>
+                let gerCities = ["Berlin", "Munich", "Cologne"];
+                let usaCities = ["Chicago", "Washington", "Boston"];
+                let ukrCities = ["Dnipro", "Kyiv", "Lviv"];
+
+                let cities2 = document.getElementById("cities");
+                function whichCountry() {
+                    let country = document.getElementById("country").value;
+                    switch (country) {
+                        case 'ger':
+                            fillCities(gerCities);
+                            break;
+                        case 'usa':
+                            fillCities(usaCities);
+                            break;
+                        case 'ukr':
+                            fillCities(ukrCities);
+                            break;
+                    }
+                }
+
+                function fillCities(arr) {
+                    let length = cities2.options.length;
+                    for (i = length - 1; i >= 0; i--) {
+                        cities2.options[i] = null;
+                    }
+                    for (var i = 0; i < arr.length; i++) {
+                        var opt = arr[i];
+                        var el = document.createElement("option");
+                        el.textContent = opt;
+                        el.value = opt;
+                        cities2.appendChild(el);
+                    }
+                    showCurrentSelection();
+                }
+
+                function showCurrentSelection() {
+                    document.getElementById('currentSelection').innerHTML = `${document.getElementById("country").selectedOptions[0].innerText}, ${document.getElementById("cities").selectedOptions[0].innerText}`;
+                }
+            </script>
+        </body>        
+        </html>
 
