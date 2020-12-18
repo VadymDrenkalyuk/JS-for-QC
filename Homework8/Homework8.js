@@ -34,16 +34,16 @@
 
 ////////////////////////////////////////////////////////////////////////////task 6
 
-// function checkEmail(str) {
-//     if (/^[^-_#][\w]+@[\w]+.[\w]+$/.test(str)) {
-//         console.log("Email is correct!");
-//     } else {
-//         console.log("Email is not correct!");
-//     }
-// }
+function checkEmail(str) {
+    if (/^[A-Za-z0-9]{1}[A-Za-z0-9_]*-?[A-Za-z0-9_]*@[A-Za-z0-9]+\.[A-Za-z0-9]+$/.test(str)) {
+        console.log("Email is correct!");
+    } else {
+        console.log("Email is not correct!");
+    }
+}
 
-// checkEmail('my_mail@gmail.com');
-// checkEmail('#my_mail@gmail.com'); 
+checkEmail('my_mail@gmail.com');
+checkEmail('#my_mail@gmail.com'); 
 
 
 ////////////////////////////////////////////////////////////////////////////task 7
