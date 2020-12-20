@@ -18,21 +18,29 @@
 
 //task 2
 
-let arr = [1, 2, 3]
 function calcArrProduct(arr) {
-    
     return new Promise(function (resolve, reject) {
         let result = 1;
         for (let i = 0; i < arr.length; i++) {
-            if (typeof (i) === 'number') {
-                result *= i;
-                } else{
-                reject ("Error");
+            if (typeof (arr[i]) === 'number') {
+                result *= arr[i];
+            } else {
+                result = undefined;
             }
-            resolve (result);
+        }
+
+        if (isNaN(result)) {
+            let reason = new Error("Error! Incorrect array!");
+            reject(reason.message);
+        } else {
+            resolve(result);
         }
     });
 }
+
+calcArrProduct([3,4,5]).then(result => console.log(result)); // 60
+calcArrProduct([5,"user2", 7, 12]).catch(result => console.log(result));
+
 
 //task 3
 
