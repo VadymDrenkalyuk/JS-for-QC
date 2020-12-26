@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Homework12</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+
+<body>
+    <button id="downloadBooksBtn" onclick="loadData()">Download books</button>
+    <div id="dataStorage"></div>
+    <script>
+        function loadData() {
+            const xhr = new XMLHttpRequest();
+
+            xhr.open('GET', 'books.json', true);
+
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState != 4) return;
+
+                if (xhr.status != 200) {
+                    alert('Error' + xhr.status + ': ' + xhr.statusText);
+                } else {
+                    let authors = JSON.parse(xhr.responseText);
+                    document.getElementById("downloadBooksBtn").outerHTML = "";
+                    document.getElementById("dataStorage").innerHTML = '<ol>';
+                    for (let i = 0; i < authors.length; i++) {
+                        document.getElementById("dataStorage").innerHTML += `<li>${authors[i].author}</li>`;
+                    }
+                    document.getElementById("dataStorage").innerHTML += '</ol>';
+                }
+            }
+            xhr.send();
+        }
+    </script>
+
+</body>
+
+</html>

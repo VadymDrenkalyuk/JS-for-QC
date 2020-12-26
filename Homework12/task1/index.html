@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Homework12</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    <button id = "voteButton" onclick="loadData()">Vote</button>
+    <script>
+        function loadData(){
+            const date = new Date();
+            const xhr = new XMLHttpRequest();
+
+            xhr.open('GET', 'data.txt', true);
+
+            xhr.onreadystatechange = function(){
+                if(xhr.readyState !=4) return;
+
+                if (xhr.status !=200){
+                    alert ('Error' + xhr.status + ': ' + xhr.statusText);
+                } else {
+                    document.getElementById("voteButton").innerHTML = xhr.responseText + `${date}`;
+                }
+            }
+            xhr.send();
+        }
+    </script>
+</body>
+</html>
