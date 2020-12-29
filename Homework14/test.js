@@ -7,7 +7,7 @@ describe("Homework14", function () {
   before(async function () {
     driver = await new Builder().forBrowser("chrome").build();
   });
-  
+  after(() => driver && driver.quit());  
 
   it("Is element enabled", async function () {
     await driver.get("http://the-internet.herokuapp.com/dropdown");
